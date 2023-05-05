@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "paths": {
+            "@/*": ["src/*"]
+        },
+        "esModuleInterop": true,
+        "strict": true,
+        "declaration": true,
+        "declarationDir": "dist"
+    },
+    "include": [
+        "src/**/*.ts"
+    ]
+}
