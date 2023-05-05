@@ -1,6 +1,7 @@
 import typescript from '@rollup/plugin-typescript';
 import run from '@rollup/plugin-run';
 import terser from '@rollup/plugin-terser';
+import dts from 'rollup-plugin-dts';
 import { readFileSync } from 'fs';
 
 const pkg = JSON.parse(readFileSync('./package.json', 'utf-8'));
@@ -34,4 +35,16 @@ export default [
 			PRODUCTION ? terser() : run(),
 		],
 	},
+	{
+		input: 'dist/index.d.ts',
+		output: [{ file: 'dist/index.d.ts', format: 'es' }],
+		plugins: [dts({
+			compilerOptions: {
+				paths: {
+					'@/*': ['dist/*'],
+				},
+				exclude: ['**/__tests__/**'],
+			}
+		})],
+	}
 ];

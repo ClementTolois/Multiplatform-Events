@@ -7,9 +7,9 @@
         "esModuleInterop": true,
         "strict": true,
         "declaration": true,
-        "declarationDir": "dist"
+        "declarationDir": "dist",
     },
     "include": [
         "src/**/*.ts"
-    ]
+    ],
 }
