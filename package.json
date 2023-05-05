@@ -1,6 +1,6 @@
 {
   "name": "multiplatform-events",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple NPM package to be able to use events everywhere!",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
